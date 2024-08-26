@@ -1,16 +1,29 @@
 # hamburguer_factory
 
-A new Flutter project.
+Este aplicativo foi feito para apresentação o funcionamento de um automato
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Descrição do Automato
 
-A few resources to get you started if this is your first Flutter project:
+...
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Layouts
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="./assets/readme/imgs/HomeScreen.png" alt="Home Screen" width="270px"> <img src="./assets/readme/imgs/NewHamburguer.png" alt="New Hamburguer" width="270px"> <img src="./assets/readme/imgs/Validation.png" alt="Validation" width="270px"> 
+
+## GIF
+
+<img src="./assets/readme/gifs/GifApp.gif" alt="Gif App" width="270px">
+
+#### O que já foi feito?
+- [X] Telas;
+- [X] Funcionamento do Automato.
+
+
+### Tecnologias utilizadas
+- ``VSCode``
+- ``Dart``
+- ``Flutter``
+- ``XCode = Emulador de IOs``
+- ``Android Studio = Emulador Android``
+- ``iPad = iPadOS``
