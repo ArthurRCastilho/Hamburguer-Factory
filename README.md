@@ -6,7 +6,7 @@ Este aplicativo foi feito para apresentação o funcionamento de um automato
 
 O aplicativo foi feito para determinar o funcionamento de um autômato de uma fábrica.
 
-<img src="./assets/readme/imgs/automato.jpeg" alt="Automato" width="270px">
+<img src="./assets/readme/imgs/automato.jpeg" alt="Automato" width="400px">
 
 ## Layouts
 
