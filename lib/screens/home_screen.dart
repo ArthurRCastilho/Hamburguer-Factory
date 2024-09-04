@@ -8,10 +8,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: ElevatedButton.icon(
           onPressed: () {
-            final hamburguer = new Hamburguer();
+            final hamburguer = Hamburguer();
             Navigator.of(context).pushNamed(
               AppRoutes.NEW_HAMBURGUER,
               arguments: hamburguer

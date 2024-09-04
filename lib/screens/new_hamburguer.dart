@@ -16,6 +16,7 @@ class _NewHamburguerState extends State<NewHamburguer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(backgroundColor: Colors.white),
       body: SafeArea(
         child: Padding(
