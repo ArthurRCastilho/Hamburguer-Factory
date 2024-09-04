@@ -2,6 +2,12 @@
 
 Este aplicativo foi feito para apresentação o funcionamento de um automato
 
+## Sobre o Aplicativo
+
+O aplicativo foi feito para determinar o funcionamento de um autômato de uma fábrica.
+
+<img src="./assets/readme/imgs/automato.jpeg" alt="Automato" width="270px">
+
 ## Layouts
 
 <img src="./assets/readme/imgs/HomeScreen.png" alt="Home Screen" width="270px"> <img src="./assets/readme/imgs/NewHamburguer.png" alt="New Hamburguer" width="270px"> <img src="./assets/readme/imgs/Validation.png" alt="Validation" width="270px"> 
