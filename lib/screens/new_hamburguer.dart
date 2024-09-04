@@ -17,112 +17,113 @@ class _NewHamburguerState extends State<NewHamburguer> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(backgroundColor: Colors.white),
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              Monitoramento(widget: widget),
-              const SizedBox(height: 10),
-              ElevatedButton(
-                child: const Text('Montar hamburguer'),
-                onPressed: () {
-                  showDialog(
-                    context: context,
-                    builder: (context) {
-                      return Verificacao(
-                        onPressedAprove: () {
-                          setState(() {
-                            widget.hamburguer.toggleMontado();
-                            Navigator.of(context).pop();
-                          });
-                        },
-                        onPressedWrong: () {
-                          setState(() {
-                            widget.hamburguer.recomecar();
-                            Navigator.of(context).pop();
-                          });
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: const Text('Novo Hamburguer'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Monitoramento(widget: widget),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              child: const Text('Montar hamburguer'),
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return Verificacao(
+                      onPressedAprove: () {
+                        setState(() {
+                          widget.hamburguer.toggleMontado();
+                          Navigator.of(context).pop();
+                        });
+                      },
+                      onPressedWrong: () {
+                        setState(() {
+                          widget.hamburguer.recomecar();
+                          Navigator.of(context).pop();
+                        });
+                      },
+                    );
+                  },
+                );
+              },
+            ),
+            const SizedBox(height: 10),
+            if (widget.hamburguer.montado == true)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    child: const Text('Fazer Inspenção'),
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return Verificacao(
+                            onPressedAprove: () {
+                              setState(() {
+                                widget.hamburguer.toggleInpecionado();
+                                Navigator.of(context).pop();
+                              });
+                            },
+                            onPressedWrong: () {
+                              setState(() {
+                                widget.hamburguer.recomecar();
+                                Navigator.of(context).pop();
+                              });
+                            },
+                          );
                         },
                       );
                     },
-                  );
-                },
+                  ),
+                ],
               ),
-              const SizedBox(height: 10),
-              if (widget.hamburguer.montado == true)
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      child: const Text('Fazer Inspenção'),
-                      onPressed: () {
-                        showDialog(
-                          context: context,
-                          builder: (context) {
-                            return Verificacao(
-                              onPressedAprove: () {
-                                setState(() {
-                                  widget.hamburguer.toggleInpecionado();
-                                  Navigator.of(context).pop();
-                                });
-                              },
-                              onPressedWrong: () {
-                                setState(() {
-                                  widget.hamburguer.recomecar();
-                                  Navigator.of(context).pop();
-                                });
-                              },
-                            );
-                          },
-                        );
-                      },
-                    ),
-                  ],
-                ),
-              const SizedBox(height: 10),
-              if (widget.hamburguer.montado &&
-                  widget.hamburguer.inspecionado == true)
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      child: const Text('Fazer Embalagem'),
-                      onPressed: () {
-                        showDialog(
-                          context: context,
-                          builder: (context) {
-                            return Verificacao(
-                              onPressedAprove: () {
-                                setState(() {
-                                  widget.hamburguer.toggleEmbalado();
-                                  Navigator.of(context).pop();
-                                });
-                              },
-                              onPressedWrong: () {
-                                setState(() {
-                                  widget.hamburguer.recomecar();
-                                  Navigator.of(context).pop();
-                                });
-                              },
-                            );
-                          },
-                        );
-                      },
-                    ),
-                  ],
-                ),
-              const SizedBox(height: 10),
-              if (widget.hamburguer.embalado == true &&
-                  widget.hamburguer.inspecionado == true &&
-                  widget.hamburguer.montado == true &&
-                  widget.hamburguer.valide == true)
-                TextButton(
-                  onPressed: Navigator.of(context).pop,
-                  child: const Text('Finalizar Hamburguer'),
-                ),
-            ],
-          ),
+            const SizedBox(height: 10),
+            if (widget.hamburguer.montado &&
+                widget.hamburguer.inspecionado == true)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    child: const Text('Fazer Embalagem'),
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return Verificacao(
+                            onPressedAprove: () {
+                              setState(() {
+                                widget.hamburguer.toggleEmbalado();
+                                Navigator.of(context).pop();
+                              });
+                            },
+                            onPressedWrong: () {
+                              setState(() {
+                                widget.hamburguer.recomecar();
+                                Navigator.of(context).pop();
+                              });
+                            },
+                          );
+                        },
+                      );
+                    },
+                  ),
+                ],
+              ),
+            const SizedBox(height: 10),
+            if (widget.hamburguer.embalado == true &&
+                widget.hamburguer.inspecionado == true &&
+                widget.hamburguer.montado == true &&
+                widget.hamburguer.valide == true)
+              TextButton(
+                onPressed: Navigator.of(context).pop,
+                child: const Text('Finalizar Hamburguer'),
+              ),
+          ],
         ),
       ),
     );

@@ -11,11 +11,12 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Center(
         child: ElevatedButton.icon(
+          icon: const Icon(Icons.add),
           onPressed: () {
             final hamburguer = Hamburguer();
             Navigator.of(context).pushNamed(
               AppRoutes.NEW_HAMBURGUER,
-              arguments: hamburguer
+              arguments: hamburguer,
             );
           },
           label: const Text('Criar novo Hamburguer'),
